@@ -1,1 +1,14 @@
+
+1. Once Dockerfile is added to project, goto project dir (/Users/prakashs/git/docker-spring-boot) and run this command
 docker build -f Dockerfile -t docker-spring-boot .
+
+It will build a docker image based on Dockerfile and tag as docker-spring-boot and this image will be created in curr dir.
+
+2. 
+docker images will list the all images available.
+
+3. Now run a container
+docker run -p 8092:8092 --name sample-spring-boot docker-spring-boot
+
+Run with -d to run container in background
+docker run -d -p 8092:8092 --name sample-spring-boot docker-spring-boot
